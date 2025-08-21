@@ -6,7 +6,7 @@ public class helloWorld{
 		}
 		for(int i = 0; i<args.length; i++){
             try{
-                int intValue = Integer.parseInt(args[i])
+                int intValue = Integer.parseInt(args[i]);
 			    System.out.println("/t args[" + i + "] as an int = " + intValue);
             }
             catch(Exception e){
