@@ -39,7 +39,6 @@ class zhou_p1{
         catch(Exception e){
 
         }
-
         try{
             Integer.parseInt(b);
             work2 = true;
@@ -68,7 +67,7 @@ class zhou_p1{
         for(int i = lowerBound; i <= upperBound; i++){
             try{
                 if (Integer.parseInt(values[i]) > testValue){
-                    returnable = returnable + values[i];
+                    returnable = returnable + Integer.parseInt(values[i]);
                 }
 
             }
@@ -82,13 +81,38 @@ class zhou_p1{
     // indices not in [lowerBound, upperBound] using a while loop to examine the array
     // elements
     public int whileLoopTest(int lowerBound, int upperBound, String testValue, String[] values){
-        return 1;
+        int returnable = 0;
+        int i = lowerBound;
+        while(i <= upperBound){
+            try{
+                Integer.parseInt(values[i]);
+            }
+            catch(Exception e){
+                if (values[i].compareTo(testValue) <= 0) {
+                    returnable = returnable + 1;
+                }
+            }
+            i = i + 1;
+        }
+        return returnable;
     }
     // method to return the sum of the int array elements not in
     // [testValue1, testValue2] and with indices in [lowerBound, upperBound]
     // using a do-while loop to examine the array elements
     public int doWhileLoopTest(int lowerBound, int upperBound, int testValue1, int testValue2, String[] values){
-        return 1;
+        int returnable = 0;
+        do{
+            try{
+                int currentVal = Integer.parseInt(values[lowerBound]);
+                if (!(testValue1 == currentVal || testValue2 == currentVal)){
+                    returnable += currentVal;
+                }
+            }
+            catch(Exception e){
+                continue;
+            }
+        }while(lowerBound <= upperBound);
+        return returnable;
     }
     // method to return the number of array elements that match the switch
     // cases 0, 1, 2, 3, 4, 5, a, e, i, o or u, the default case, and count of
