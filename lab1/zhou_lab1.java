@@ -6,6 +6,7 @@ import java.util.Scanner; // Import the Scanner class to read text files
 class zhou_lab1{
     public static void main(String[] args) {
         //argument intake
+        java.text.DecimalFormat df = new java.text.DecimalFormat("###,###,###,###,###");
         int lineCount = 0;
         int tokenCount = 0;
         int intCount = 0;
@@ -22,7 +23,7 @@ class zhou_lab1{
             //something with a hashmap or string[] in order to store all the others
             returnable = new int[args.length - 1];
             input = new String[args.length - 1];
-            for (int i = 1; i <args.length; i++){
+            for (int i = 1; i < args.length; i++){
                 returnable[i-1] = 0;
                 input[i-1] = args[i];
             }
@@ -48,9 +49,10 @@ class zhou_lab1{
                     catch(Exception e){
                         //dont got anythign to throw here
                     }
-                    for(int j = 0; j < input.length; i++){
-                        if (items[j].compareTo(input[j]) == 0){
+                    for(int j = 0; j < input.length; j++){
+                        if (items[i].compareTo(input[j]) == 0){
                             returnable[j] = returnable[j] + 1;
+                            break;
                         }
                     }
                 }
@@ -64,7 +66,7 @@ class zhou_lab1{
         System.out.println("lineCount = " + lineCount);
         System.out.println("tokenCount = " + tokenCount);
         System.out.println("intCount = " + intCount);
-        System.out.println("intSum = " + intSum);
+        System.out.println("intSum = " + df.format(intSum));
         for(int i = 0; i < returnable.length; i++){
             System.out.println("Amount of " + input[i] + " = " + returnable[i]); 
         }
