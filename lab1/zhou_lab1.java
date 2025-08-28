@@ -10,7 +10,7 @@ class zhou_lab1{
         int lineCount = 0;
         int tokenCount = 0;
         int intCount = 0;
-        int intSum = 0;
+        long intSum = 0;
         int[] returnable = new int[0];
         String[] input = new String[0];
         if (args.length == 0){
@@ -47,10 +47,11 @@ class zhou_lab1{
                         intSum = intSum + Integer.parseInt(items[i]);
                     }
                     catch(Exception e){
-                        //dont got anythign to throw here
+                        //dont got anything to throw here
                     }
                     for(int j = 0; j < input.length; j++){
-                        if (items[i].compareTo(input[j]) == 0){
+                        //check if its part of the array that has the excess inputs
+                        if (items[i].equalsIgnoreCase(input[j])){
                             returnable[j] = returnable[j] + 1;
                             break;
                         }
@@ -60,12 +61,14 @@ class zhou_lab1{
             reader.close();
         }
         catch (FileNotFoundException e){
+            //when the file doesn't exist
             System.out.println("Code Broke");
             e.printStackTrace();
         }
-        System.out.println("lineCount = " + lineCount);
-        System.out.println("tokenCount = " + tokenCount);
-        System.out.println("intCount = " + intCount);
+        //print the remainder of the values 
+        System.out.println("lineCount = " + df.format(lineCount));
+        System.out.println("tokenCount = " + df.format(tokenCount));
+        System.out.println("intCount = " + df.format(intCount));
         System.out.println("intSum = " + df.format(intSum));
         for(int i = 0; i < returnable.length; i++){
             System.out.println("Amount of " + input[i] + " = " + returnable[i]); 

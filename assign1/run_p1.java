@@ -1,5 +1,3 @@
-package lab1;
-
 class run_p1
 {
 	public static void main(String[] args)

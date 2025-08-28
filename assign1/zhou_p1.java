@@ -1,4 +1,3 @@
-package lab1;
 
 class zhou_p1{
     public zhou_p1(){
@@ -25,10 +24,6 @@ class zhou_p1{
     //return true if a > b
     //return false if a <= b
     boolean compare(String a, String b){
-        //sort length
-        if (a.length() != b.length()){
-            return a.length() > b.length();
-        }
         //sort by int
         boolean work1 = false;
         boolean work2 = false;
@@ -55,10 +50,12 @@ class zhou_p1{
         else if(work2){
             return false;
         }
-        //compareto
-        else{
-            return a.compareTo(b) > 0;
+        //sort length
+        if (a.length() != b.length()){
+            return a.length() > b.length();
         }
+        //compareto
+        return a.compareTo(b) > 0;
     }
     // method to return the sum of the integer array elements > testValue with indices
     // in [lowerBound, upperBound] using a for loop to examine the array elements
