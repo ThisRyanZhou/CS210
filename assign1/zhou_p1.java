@@ -79,20 +79,45 @@ class zhou_p1{
     // elements
     public int whileLoopTest(int lowerBound, int upperBound, String testValue, String[] values){
         int returnable = 0;
-        int i = lowerBound;
-        while(i <= upperBound){
-            try{
-                Integer.parseInt(values[i]);
-            }
-            catch(Exception e){
-                if (values[i].compareTo(testValue) <= 0) {
-                    returnable = returnable + 1;
+        int i = 0;
+        while(i<values.length){
+            if(i < lowerBound || i > upperBound){
+                try{
+                    Integer.parseInt(values[i]);
+                }
+                catch(Exception e){
+                    //if (values[i].compareTo(testValue) <= 0) {
+                    if(!compare(values[i],testValue)){
+                        returnable = returnable + 1;
+                    }
                 }
             }
             i = i + 1;
         }
         return returnable;
     }
+
+    // public int whileLoopTest1(int lowerBound, int upperBound, String testValue, String[] values){
+    //     int returnable = 0;
+    //     int i = 0;
+    //     while(i<values.length){
+    //         for(int j = lowerBound; j<=upperBound; j++){
+    //             if(values[i].compareTo(values[j])!=0){
+    //                 try{
+    //                     Integer.parseInt(values[i]);
+    //                 }
+    //                 catch(Exception e){
+    //                     if (values[i].compareTo(testValue) <= 0) {
+    //                         returnable = returnable + 1;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //         i = i + 1;
+    //     }
+    //     return returnable;
+    // }
+
     // method to return the sum of the int array elements not in
     // [testValue1, testValue2] and with indices in [lowerBound, upperBound]
     // using a do-while loop to examine the array elements
@@ -101,13 +126,14 @@ class zhou_p1{
         do{
             try{
                 int currentVal = Integer.parseInt(values[lowerBound]);
-                if (!(testValue1 == currentVal || testValue2 == currentVal)){
-                    returnable += currentVal;
+                if (testValue1 < currentVal || testValue2 > currentVal){
+                    returnable = returnable + currentVal;
                 }
             }
             catch(Exception e){
-                continue;
+                // break;
             }
+            lowerBound++;
         }while(lowerBound <= upperBound);
         return returnable;
     }
@@ -131,6 +157,19 @@ class zhou_p1{
     // default - count of values not covered elsewhere
     // the number of values with length less than 3
     public int[] switchTest(int lowerBound, int upperBound, String[] values){
+        
+        for(int i = lowerBound; i <= upperBound; i++){
+            try{
+                switch(values[i].charAt(3)){
+                    // case
+                    // default:
+
+                }
+            }
+            catch(Exception e){
+                //index 11
+            }
+        }
         return (new int[1]);
     }
 }
