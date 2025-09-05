@@ -157,19 +157,76 @@ class zhou_p1{
     // default - count of values not covered elsewhere
     // the number of values with length less than 3
     public int[] switchTest(int lowerBound, int upperBound, String[] values){
-        
+        int[] returnable = new int[12];
         for(int i = lowerBound; i <= upperBound; i++){
             try{
-                switch(values[i].charAt(3)){
-                    // case
-                    // default:
+                switch(values[i].charAt(2)){
+                    // case 0-5 a e i o u
+                    // default 11
+                    case('0'):
+                        returnable[0] = returnable[0]+1;
+                        break;
+                    case('1'):
+                        try{
+                            returnable[1] = returnable[1] + Integer.parseInt(values[i]);
+                        }
+                        catch(Exception e){
 
+                        }
+                        break;
+                    case('2'):
+                        try{
+                            Integer.parseInt(values[i]);
+                        }
+                        catch(Exception e){
+                            returnable[2]++;
+                        }
+                        break;
+                    case('3'):
+                        returnable[3]++;
+                        break;
+                    case('4'):
+                        try{
+                            Integer.parseInt(values[i]);
+                            returnable[4]++;
+                        }
+                        catch(Exception e){
+
+                        }
+                        break;
+                    case('5'):
+                        try{
+                            returnable[5] = returnable[5] + Integer.parseInt(values[i]);
+                        }
+                        catch(Exception e){
+
+                        }
+                        break;
+                    case('a'):
+                        returnable[6]++;
+                        break;
+                    case('e'):
+                        returnable[7]++;
+                        break;
+                    case('i'):
+                        returnable[8]++;
+                        break;
+                    case('o'):
+                        returnable[9]++;
+                        break;
+                    case('u'):
+                        returnable[9]++;
+                        break;
+                    default:
+                        returnable[10]++;
+                        break;
                 }
             }
             catch(Exception e){
+                returnable[11]++;
                 //index 11
             }
         }
-        return (new int[1]);
+        return returnable;
     }
 }
