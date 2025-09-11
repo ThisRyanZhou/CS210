@@ -1,0 +1,164 @@
+For lab 3 we will be reading a blank space delimited text file and writing a blank space
+delimited text file. While processing the input file, we will make the following modification to
+each line of input. First, for each line the words will be written in the reverse order that they
+show up in the current input line. That is, the line “cats dogs frogs” becomes “frogs dogs cats”.
+And secondly, each word will be written backwards. The two combined takes an input line of
+“cats dogs frogs” and outputs “sgorf sgod stac”. Additionally we will be keeping a list of the
+words that the input file contains and the number of times each word occurs in the file. We will
+also keep track of the number of lines in the input file, the total number of words in the input
+file, and the total number of characters contained in the words of the input file.
+Your program should be named “your_last_name_in_lower_case_lab3.java” with a
+corresponding class name. Your program will take two or three command line arguments. The
+first is the input filename, the second is the output filename, and the third, which is optional,
+will be one of {“True”, “true”, “Yes”, “yes”, “T”, “t”, “Y”, “y”} signifying if you should output the
+sorted list of words and number of occurences in the input file.
+To create the list of words you are to use a TreeSet. The TreeSet will create a unique list and
+will also store them in sorted order. To keep track of the number of occurences of the words,
+you are to use a HashMap, with the words as the keys and the count as the associated value.
+For the count in the HashMap, you need an object, so you can either use an Integer or int[1]
+to keep track of the word count. You are to also use an ArrayDeque as a stack to reverse the
+order of the words in each input line. This is one of the nice features of a stack. It naturally
+reverses the order for you. I used a StringTokenizer to parse the words from each input line.
+You are free to use a StringTokenizer, a Scanner, String.split() or any other way you wish to
+parse the input lines of text.
+We have already used most of the Java language features needed to complete this lab.
+Below is a summary:
+1. To create a BufferedReader to read a text file we have previously used
+a) java.io.BufferedReader input = new java.io.BufferedReader(new
+java.io.InputStreamReader(new java.io.FileInputStream(inputFilename)));
+2. To create a PrintWriter to write to a text file we have previously used
+a) java.io.PrintWriter output = new java.io.PrintWriter(new java.io.BufferedWriter(new
+java.io.FileWriter(outputFilename)));
+3. Although we haven't used a stack previously, we have or will be using an ArrayDeque
+as a stack or queue for programming assignment 4
+a) java.util.ArrayDeque<String> stackOfCurrentStrings = new
+java.util.ArrayDeque<>();
+b) The ArrayDeque.addLast() can be used to add the current word of the input file to
+the end of the ArrayDeque (the ArrayDeque.add() method will also add the new
+value to the end)
+c) The ArrayDeque.removeLast() can be used to retrieve and remove the last element
+of the ArrayDeque – which can be used to reverse the order of the words for the
+current (ArrayDeque.pollLast() also retrieves and removes the last element of the
+ArrayDeque)
+d) ArrayDeque.size() can be used to determine if we have processed all of the words
+from the current line when writing them out in reverse order
+e) Since we are using the ArrayDeque as a stack, you can also use the push() and
+pop() methods for adding and removing elements from the ArrayDeque. These are
+the traditional functions for adding an element to a stack, and removing an element
+from a stack.
+4. String.toCharArray() can be used to get a char array of the characters of a String. We
+can then simply loop over the elements of the char array in reverse order to reverse
+the current string's symbols
+5. To create a StringTokenizer with a blank space delimiter, we have used
+a) java.util.StringTokenizer st = new java.util.StringTokenizer(inn, " ");
+1. Assuming inn is a String of the current input line of text
+b) And use StringTokenizer.hasMoreTokens() and StringTokenizer.nextToken() in a
+while loop to loop over the words of the current input line
+6. We can create a new TreeSet<String> with
+a) java.util.TreeSet<String> uniqueStrings = new java.util.TreeSet<>();
+b) TreeSet.contains() can be used to determine if an element is contained in the
+TreeSet
+c) TreeSet.size() can be used to determine how many elements are in a TreeSet
+d) We can use the enhanced for loop to loop through the elements of a TreeSet
+for( String word : uniqueStrings )
+{
+// put code here to process the current word
+}
+7. We can create a new HashMap with String keys and Integer or int[] values with
+a) java.util.HashMap<String, Integer> stringCount = new java.util.HashMap<>();
+or
+b) java.util.HashMap<String, int[]> stringCount = new java.util.HashMap<>();
+c) You can use the HashMap get & put methods to retrieve and update the count
+assicated with a word
+8. Your program is to output to the terminal
+a) The number of lines in the input file
+b) The number of words in the input file
+c) The number of characters in the words of the input file
+d) The number of unique words in the input file
+e) If the optional third command line argument starts with {“T”, “t”, “Y”, “y”}, then output
+the sorted list of words and number of occurences in the input file
+1. You can use the enhanced for loop to do this, since the TreeSet maintains the
+elements in their natural ordering, which for Strings is alphabetical ordering
+for( String word : uniqueStrings )
+{
+// output the current word and count
+}
+f) Use the same DecimalFormat that you used in lab 1 to format the values for 7a) –
+7e).
+1. java.text.DecimalFormat df = new java.text.DecimalFormat("###,###,###,###,###");
+9. You are required to use
+a) A TreeSet to create the list of words in the input file
+b) A HashMap for keeping track of the number of occurences of each word in the input
+file
+c) An ArrayDeque as a stack to reverse the order of the words for the current input
+line
+Here is a sample input file:
+the small dogs sat in the grass
+the grasshopper ate some grass
+the praying mantis was just sitting there looking at the frog
+the toad made a bad mistake trusting the alligator
+cats dogs frogs
+d2g 5k2 9op 2us n!s
+Here is the corresponding output file:
+ssarg eht ni tas sgod llams eht
+ssarg emos eta reppohssarg eht
+gorf eht ta gnikool ereht gnittis tsuj saw sitnam gniyarp eht
+rotagilla eht gnitsurt ekatsim dab a edam daot eht
+sgorf sgod stac
+s!n su2 po9 2k5 g2d
+Below is a sample run of my version, without outputting the sorted unique words:
+java garrison_lab3 lab3_sample_input_1.txt lab3_sample_output_1.txt n
+lines = 6
+words = 40
+character in words = 172
+unique words = 32
+Below is a sample run of my version outputting the sorted unique words:
+java garrison_lab3 lab3_sample_input_1.txt lab3_sample_output_1.txt y
+lines = 6
+words = 40
+character in words = 172
+unique words = 32
+ordered unique words
+2us 1
+5k2 1
+9op 1
+a 1
+alligator 1
+at 1
+ate 1
+bad 1
+cats 1
+d2g 1
+dogs 2
+frog 1
+frogs 1
+grass 2
+grasshopper 1
+in 1
+just 1
+looking 1
+made 1
+mantis 1
+mistake 1
+n!s 1
+praying 1
+sat 1
+sitting 1
+small 1
+some 1
+the 7
+there 1
+toad 1
+trusting 1
+was 1
+To get credit:
+• demonstrate your implementation to a TA or CA and upload a copy of your source
+code to the lab code assignment
+• if you do not complete the lab during class, upload screen shots of the demos to the
+lab assignment
+To demostrate:
+1) execute your program with inputs “lab3_test_input_1.txt lab3_test_output_1.txt y”
+2) execute “java checklab3files lab3_test_input_1.txt lab3_test_output_1.txt” to verify that
+your output file is correct
+1. checklab3files.java will compare the two input file, reversing the symbols in the
+second file prior to comparing them
