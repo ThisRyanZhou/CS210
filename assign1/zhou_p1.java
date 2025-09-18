@@ -126,7 +126,7 @@ class zhou_p1{
         do{
             try{
                 int currentVal = Integer.parseInt(values[lowerBound]);
-                if (testValue1 < currentVal || testValue2 > currentVal){
+                if (testValue1 > currentVal || testValue2 < currentVal){
                     returnable = returnable + currentVal;
                 }
             }

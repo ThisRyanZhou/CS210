@@ -182,7 +182,6 @@ class zhou_p2{
                         }
                     }
                     output.println("long array\t" + printAble);
-                    
                 }
                 else if (inputType == 'g'){
                     int max = input.readInt();

@@ -1,0 +1,7 @@
+enum TransactionListType
+{
+	ALL_SUCCESSFULL,
+	ALL_FAILED,
+	SOME_SUCCESSFULL,
+	SOME_FAILED,
+}
