@@ -1,0 +1,59 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "args":
+            [
+                "0",
+                "1",
+                "2",
+                "a",
+                "4",
+                "5"
+            ],
+            "osx":{
+                "args":[
+                    "0",
+                    "1",
+                    "2",
+                    "c",
+                    "4",
+                    "5"
+                ]
+            }
+        },
+        {
+            "type": "java",
+            "name": "lab5",
+            "request": "launch",
+            "mainClass": "${file}",
+            "projectName": "${cwd}",
+            "args":
+            [
+                "0",
+                "1",
+                "2",
+                "b",
+                "4",
+                "5"
+            ],
+            "osx":{
+                "args":[
+                    "0",
+                    "1",
+                    "2",
+                    "d",
+                    "4",
+                    "5"
+                ]
+            }
+        }
+    ]
+}

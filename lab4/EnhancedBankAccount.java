@@ -1,3 +1,5 @@
+import java.time.temporal.ChronoUnit;
+
 class EnhancedBankAccount extends BankAccount
 {
 	private final java.util.ArrayList<Transaction> successfulTransactions;
@@ -84,19 +86,46 @@ class EnhancedBankAccount extends BankAccount
 				
 		if( transactionListType == TransactionListType.ALL_SUCCESSFULL )
 		{
-			
+			for(Transaction a: successfulTransactions){
+				boolean during = (a.date().before(endDate) || a.date().equals(endDate)) && (a.date().after(startDate) && a.date().equals(startDate));
+				if (during){
+					results.add(a);
+				}
+			}
 		}
 		
 		if( transactionListType == TransactionListType.SOME_SUCCESSFULL )
 		{
+			for(Transaction a: successfulTransactions){
+				if(a.type().equals(transactionType)){
+					boolean during = (a.date().before(endDate) || a.date().equals(endDate)) && (a.date().after(startDate) && a.date().equals(startDate));
+					if (during){
+						results.add(a);
+					}
+				}
+			}
 		}
 		
 		if( transactionListType == TransactionListType.ALL_FAILED )
 		{
+			for(Transaction a: failedTransactions){
+				boolean during = (a.date().before(endDate) || a.date().equals(endDate)) && (a.date().after(startDate) && a.date().equals(startDate));
+				if (during){
+					results.add(a);
+				}
+			}
 		}
 		
 		if( transactionListType == TransactionListType.SOME_FAILED )
 		{
+			for(Transaction a: failedTransactions){
+				if(a.type().equals(transactionType)){
+					boolean during = (a.date().before(endDate) || a.date().equals(endDate)) && (a.date().after(startDate) && a.date().equals(startDate));
+					if (during){
+						results.add(a);
+					}
+				}
+			}
 		}
 		return results;
 	}	
