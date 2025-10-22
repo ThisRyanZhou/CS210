@@ -1,0 +1,211 @@
+#first bank account
+new BankAccount	smith	jane	0	0
+withdrawFromSavings	10			
+withdrawFromChecking	20			
+transferToSavings	0.01			
+transferToChecking	0.01			
+depositToChecking	100			
+depositToSavings	200			
+withdrawFromSavings	200			
+withdrawFromChecking	100			
+depositToChecking	100			
+depositToSavings	200			
+transferToSavings	100			
+transferToChecking	300			
+transferToSavings	150			
+transferToChecking	50			
+withdrawFromSavings	50			
+withdrawFromChecking	150			
+transferToChecking	50.01			
+transferToSavings	50.01			
+withdrawFromSavings	50.01			
+withdrawFromChecking	50.01			
+withdrawFromSavings	50			
+withdrawFromChecking	50			
+depositToChecking	10.01			
+depositToSavings	20.01			
+depositToChecking	20.55			
+depositToSavings	40.91			
+withdrawFromSavings	12.18			
+withdrawFromChecking	15.78			
+transferToChecking	23.42			
+transferToSavings	37.26			
+				
+#second bank account				
+new BankAccount	smith	page	10	20
+withdrawFromSavings	20			
+withdrawFromChecking	10			
+withdrawFromSavings	10			
+withdrawFromChecking	20			
+transferToSavings	0.01			
+transferToChecking	0.01			
+depositToChecking	100			
+depositToSavings	200			
+withdrawFromSavings	200			
+withdrawFromChecking	100			
+depositToChecking	100			
+depositToSavings	200			
+transferToSavings	100			
+transferToChecking	300			
+transferToSavings	150			
+transferToChecking	50			
+withdrawFromSavings	50			
+withdrawFromChecking	150			
+transferToChecking	50.01			
+transferToSavings	50.01			
+withdrawFromSavings	50.01			
+withdrawFromChecking	50.01			
+withdrawFromSavings	50			
+withdrawFromChecking	50			
+depositToChecking	10.01			
+depositToSavings	20.01			
+depositToChecking	20.55			
+depositToSavings	40.91			
+withdrawFromSavings	12.18			
+withdrawFromChecking	15.78			
+transferToChecking	23.42			
+transferToSavings	37.26			
+				
+#first enhanced bank account				
+new EnhancedBankAccount	smith	joe	0	0
+getDate	0			
+withdrawFromSavings	10			
+withdrawFromChecking	20			
+transferToSavings	0.01			
+transferToChecking	0.01			
+getDate	1			
+depositToChecking	100			
+depositToSavings	200			
+withdrawFromSavings	200			
+withdrawFromChecking	100			
+depositToChecking	100			
+depositToSavings	200			
+transferToSavings	100			
+transferToChecking	300			
+transferToSavings	150			
+transferToChecking	50			
+withdrawFromSavings	50			
+withdrawFromChecking	150			
+transferToChecking	50.01			
+transferToSavings	50.01			
+withdrawFromSavings	50.01			
+withdrawFromChecking	50.01			
+getDate	2			
+withdrawFromSavings	50			
+withdrawFromChecking	50			
+depositToChecking	10.01			
+depositToSavings	20.01			
+depositToChecking	20.55			
+depositToSavings	40.91			
+withdrawFromSavings	12.18			
+withdrawFromChecking	15.78			
+transferToChecking	23.42			
+transferToSavings	37.26			
+getDate	3			
+
+#two parameter lists
+getAllSuccessfulTransactionsNoDate	0			
+getAllFailedTransactionsNoDate	0			
+getWithdrawFromChecking	0			
+getWithdrawFromSavings	0			
+getDepositToChecking	0			
+getDepositToChecking	0			
+getTransferToChecking	0			
+getTransferToSavings	0			
+getNewAccountSuccessfulTransactionsNoDate	0
+getFailedWithdrawFromChecking	0			
+getFailedWithdrawFromSavings	0			
+getFailedDepositToChecking	0			
+getFailedDepositToSavings	0			
+getFailedTransferToChecking	0			
+getFailedTransferToSavings	0			
+
+#four parameter lists
+getAllSuccessfulTransactions	0	2		
+getAllFailedTransactions	0	2		
+getWithdrawFromCheckingWithDate	2	3		
+getWithdrawFromSavingsWithDate	2	3		
+getDepositToCheckingWithDate	2	3		
+getDepositToSavingsWithDate	2	3		
+getTransferToCheckingWithDate	2	3		
+getTransferToSavingsWithDate	2	3		
+getFailedWithdrawFromCheckingWithDate	1	3		
+getFailedWithdrawFromSavingsWithDate	1	3		
+getFailedDepositToCheckingWithDate	1	3		
+getFailedDepositToSavingsWithDate	1	3		
+getFailedTransferToCheckingWithDate	1	3		
+getFailedTransferToSavingsWithDate	1	3		
+				
+#second enhanced bank account				
+new EnhancedBankAccount	smith	bill	50.01	74.33
+getDate	0			
+withdrawFromSavings	200			
+withdrawFromChecking	100			
+withdrawFromSavings	74.33			
+withdrawFromChecking	50.01			
+withdrawFromSavings	10			
+withdrawFromChecking	20			
+transferToSavings	0.01			
+transferToChecking	0.01			
+getDate	1			
+depositToChecking	100			
+depositToSavings	200			
+withdrawFromSavings	200			
+withdrawFromChecking	100			
+depositToChecking	100			
+depositToSavings	200			
+transferToSavings	100			
+transferToChecking	300			
+transferToSavings	150			
+transferToChecking	50			
+withdrawFromSavings	50			
+withdrawFromChecking	150			
+transferToChecking	50.01			
+transferToSavings	50.01			
+withdrawFromSavings	50.01			
+withdrawFromChecking	50.01			
+getDate	2			
+withdrawFromSavings	50			
+withdrawFromChecking	50			
+depositToChecking	10.01			
+depositToSavings	20.01			
+depositToChecking	20.55			
+depositToSavings	40.91			
+withdrawFromSavings	12.18			
+withdrawFromChecking	15.78			
+transferToChecking	23.42			
+transferToSavings	37.26			
+getDate	3			
+
+#two parameter lists
+getAllSuccessfulTransactionsNoDate	0			
+getAllFailedTransactionsNoDate	0			
+getWithdrawFromChecking	0			
+getWithdrawFromSavings	0			
+getDepositToChecking	0			
+getDepositToChecking	0			
+getTransferToChecking	0			
+getTransferToSavings	0			
+getNewAccountSuccessfulTransactionsNoDate	0
+getFailedWithdrawFromChecking	0			
+getFailedWithdrawFromSavings	0			
+getFailedDepositToChecking	0			
+getFailedDepositToSavings	0			
+getFailedTransferToChecking	0			
+getFailedTransferToSavings	0			
+
+#four parameter lists
+getAllSuccessfulTransactions	0	2		
+getAllFailedTransactions	0	2		
+getWithdrawFromCheckingWithDate	2	3		
+getWithdrawFromSavingsWithDate	2	3		
+getDepositToCheckingWithDate	2	3		
+getDepositToSavingsWithDate	2	3		
+getTransferToCheckingWithDate	2	3		
+getTransferToSavingsWithDate	2	3		
+getFailedWithdrawFromCheckingWithDate	1	3		
+getFailedWithdrawFromSavingsWithDate	1	3		
+getFailedDepositToCheckingWithDate	1	3		
+getFailedDepositToSavingsWithDate	1	3		
+getFailedTransferToCheckingWithDate	1	3		
+getFailedTransferToSavingsWithDate	1	3		

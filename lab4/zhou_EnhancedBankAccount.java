@@ -1,46 +1,11 @@
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-// none of this works if i change the name to have my last name before the bank account
-
 import java.time.temporal.ChronoUnit;
 
-class EnhancedBankAccount extends BankAccount
+class zhou_EnhancedBankAccount extends zhou_BankAccount
 {
 	private final java.util.ArrayList<Transaction> successfulTransactions;
 	private final java.util.ArrayList<Transaction> failedTransactions;
 	
-	EnhancedBankAccount(String ownerLastName, String ownerFirstName, double checkingBalance, double savingsBalance)
+	zhou_EnhancedBankAccount(String ownerLastName, String ownerFirstName, double checkingBalance, double savingsBalance)
 	{
 		super(ownerLastName, ownerFirstName, checkingBalance, savingsBalance);
 		
@@ -60,7 +25,7 @@ class EnhancedBankAccount extends BankAccount
 		}
 	}
 	
-	EnhancedBankAccount(String ownerLastName, String ownerFirstName)
+	zhou_EnhancedBankAccount(String ownerLastName, String ownerFirstName)
 	{
 		this(ownerLastName, ownerFirstName, 0.0, 0.0);
 	}

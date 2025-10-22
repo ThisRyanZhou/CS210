@@ -4,5 +4,9 @@ record Transaction(TransactionType type, java.util.Date date, double amount)
 	{
 		return type + " " + date.toString() + " " + amount;
 	}
+
+	public String toStringLessDate(){
+		return type + " " + amount;
+	}
 }
 
