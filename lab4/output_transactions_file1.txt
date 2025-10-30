@@ -167,20 +167,34 @@ getFailedTransferToChecking
 getFailedTransferToSavings
 	TRANSFER_TO_SAVINGS 0.01
 	TRANSFER_TO_SAVINGS 50.01
-getAllSuccessfulTransactions Wed Oct 22 12:09:21 EDT 2025 Wed Oct 22 12:09:22 EDT 2025
-getAllFailedTransactions Wed Oct 22 12:09:21 EDT 2025 Wed Oct 22 12:09:22 EDT 2025
-getWithdrawFromCheckingWithDate Wed Oct 22 12:09:22 EDT 2025 Wed Oct 22 12:09:23 EDT 2025
-getWithdrawFromSavingsWithDate Wed Oct 22 12:09:22 EDT 2025 Wed Oct 22 12:09:23 EDT 2025
-getDepositToCheckingWithDate Wed Oct 22 12:09:22 EDT 2025 Wed Oct 22 12:09:23 EDT 2025
-getDepositToSavingsWithDate Wed Oct 22 12:09:22 EDT 2025 Wed Oct 22 12:09:23 EDT 2025
-getTransferToCheckingWithDate Wed Oct 22 12:09:22 EDT 2025 Wed Oct 22 12:09:23 EDT 2025
-getTransferToSavingsWithDate Wed Oct 22 12:09:22 EDT 2025 Wed Oct 22 12:09:23 EDT 2025
-getFailedWithdrawFromCheckingWithDate Wed Oct 22 12:09:21 EDT 2025 Wed Oct 22 12:09:23 EDT 2025
-getFailedWithdrawFromSavingsWithDate Wed Oct 22 12:09:21 EDT 2025 Wed Oct 22 12:09:23 EDT 2025
-getFailedDepositToCheckingWithDate Wed Oct 22 12:09:21 EDT 2025 Wed Oct 22 12:09:23 EDT 2025
-getFailedDepositToSavingsWithDate Wed Oct 22 12:09:21 EDT 2025 Wed Oct 22 12:09:23 EDT 2025
-getFailedTransferToCheckingWithDate Wed Oct 22 12:09:21 EDT 2025 Wed Oct 22 12:09:23 EDT 2025
-getFailedTransferToSavingsWithDate Wed Oct 22 12:09:21 EDT 2025 Wed Oct 22 12:09:23 EDT 2025
+getAllSuccessfulTransactions Wed Oct 22 12:42:53 EDT 2025 Wed Oct 22 12:42:54 EDT 2025
+getAllFailedTransactions Wed Oct 22 12:42:53 EDT 2025 Wed Oct 22 12:42:54 EDT 2025
+getWithdrawFromCheckingWithDate Wed Oct 22 12:42:54 EDT 2025 Wed Oct 22 12:42:54 EDT 2025
+	WITHDRAW_FROM_CHECKING 50.0
+	WITHDRAW_FROM_CHECKING 15.78
+getWithdrawFromSavingsWithDate Wed Oct 22 12:42:54 EDT 2025 Wed Oct 22 12:42:54 EDT 2025
+	WITHDRAW_FROM_SAVINGS 50.0
+	WITHDRAW_FROM_SAVINGS 12.18
+getDepositToCheckingWithDate Wed Oct 22 12:42:54 EDT 2025 Wed Oct 22 12:42:54 EDT 2025
+	DEPOSIT_TO_CHECKING 10.01
+	DEPOSIT_TO_CHECKING 20.55
+getDepositToSavingsWithDate Wed Oct 22 12:42:54 EDT 2025 Wed Oct 22 12:42:54 EDT 2025
+	DEPOSIT_TO_SAVINGS 20.01
+	DEPOSIT_TO_SAVINGS 40.91
+getTransferToCheckingWithDate Wed Oct 22 12:42:54 EDT 2025 Wed Oct 22 12:42:54 EDT 2025
+	TRANSFER_TO_CHECKING 23.42
+getTransferToSavingsWithDate Wed Oct 22 12:42:54 EDT 2025 Wed Oct 22 12:42:54 EDT 2025
+	TRANSFER_TO_SAVINGS 37.26
+getFailedWithdrawFromCheckingWithDate Wed Oct 22 12:42:53 EDT 2025 Wed Oct 22 12:42:54 EDT 2025
+	WITHDRAW_FROM_CHECKING 50.01
+getFailedWithdrawFromSavingsWithDate Wed Oct 22 12:42:53 EDT 2025 Wed Oct 22 12:42:54 EDT 2025
+	WITHDRAW_FROM_SAVINGS 50.01
+getFailedDepositToCheckingWithDate Wed Oct 22 12:42:53 EDT 2025 Wed Oct 22 12:42:54 EDT 2025
+getFailedDepositToSavingsWithDate Wed Oct 22 12:42:53 EDT 2025 Wed Oct 22 12:42:54 EDT 2025
+getFailedTransferToCheckingWithDate Wed Oct 22 12:42:53 EDT 2025 Wed Oct 22 12:42:54 EDT 2025
+	TRANSFER_TO_CHECKING 50.01
+getFailedTransferToSavingsWithDate Wed Oct 22 12:42:53 EDT 2025 Wed Oct 22 12:42:54 EDT 2025
+	TRANSFER_TO_SAVINGS 50.01
 end EnhancedBankAccount
 smith, joe, 000002
 0.9400000000000048
@@ -290,20 +304,34 @@ getFailedTransferToChecking
 getFailedTransferToSavings
 	TRANSFER_TO_SAVINGS 0.01
 	TRANSFER_TO_SAVINGS 50.01
-getAllSuccessfulTransactions Wed Oct 22 12:09:25 EDT 2025 Wed Oct 22 12:09:26 EDT 2025
-getAllFailedTransactions Wed Oct 22 12:09:25 EDT 2025 Wed Oct 22 12:09:26 EDT 2025
-getWithdrawFromCheckingWithDate Wed Oct 22 12:09:26 EDT 2025 Wed Oct 22 12:09:26 EDT 2025
-getWithdrawFromSavingsWithDate Wed Oct 22 12:09:26 EDT 2025 Wed Oct 22 12:09:26 EDT 2025
-getDepositToCheckingWithDate Wed Oct 22 12:09:26 EDT 2025 Wed Oct 22 12:09:26 EDT 2025
-getDepositToSavingsWithDate Wed Oct 22 12:09:26 EDT 2025 Wed Oct 22 12:09:26 EDT 2025
-getTransferToCheckingWithDate Wed Oct 22 12:09:26 EDT 2025 Wed Oct 22 12:09:26 EDT 2025
-getTransferToSavingsWithDate Wed Oct 22 12:09:26 EDT 2025 Wed Oct 22 12:09:26 EDT 2025
-getFailedWithdrawFromCheckingWithDate Wed Oct 22 12:09:25 EDT 2025 Wed Oct 22 12:09:26 EDT 2025
-getFailedWithdrawFromSavingsWithDate Wed Oct 22 12:09:25 EDT 2025 Wed Oct 22 12:09:26 EDT 2025
-getFailedDepositToCheckingWithDate Wed Oct 22 12:09:25 EDT 2025 Wed Oct 22 12:09:26 EDT 2025
-getFailedDepositToSavingsWithDate Wed Oct 22 12:09:25 EDT 2025 Wed Oct 22 12:09:26 EDT 2025
-getFailedTransferToCheckingWithDate Wed Oct 22 12:09:25 EDT 2025 Wed Oct 22 12:09:26 EDT 2025
-getFailedTransferToSavingsWithDate Wed Oct 22 12:09:25 EDT 2025 Wed Oct 22 12:09:26 EDT 2025
+getAllSuccessfulTransactions Wed Oct 22 12:42:56 EDT 2025 Wed Oct 22 12:42:57 EDT 2025
+getAllFailedTransactions Wed Oct 22 12:42:56 EDT 2025 Wed Oct 22 12:42:57 EDT 2025
+getWithdrawFromCheckingWithDate Wed Oct 22 12:42:57 EDT 2025 Wed Oct 22 12:42:58 EDT 2025
+	WITHDRAW_FROM_CHECKING 50.0
+	WITHDRAW_FROM_CHECKING 15.78
+getWithdrawFromSavingsWithDate Wed Oct 22 12:42:57 EDT 2025 Wed Oct 22 12:42:58 EDT 2025
+	WITHDRAW_FROM_SAVINGS 50.0
+	WITHDRAW_FROM_SAVINGS 12.18
+getDepositToCheckingWithDate Wed Oct 22 12:42:57 EDT 2025 Wed Oct 22 12:42:58 EDT 2025
+	DEPOSIT_TO_CHECKING 10.01
+	DEPOSIT_TO_CHECKING 20.55
+getDepositToSavingsWithDate Wed Oct 22 12:42:57 EDT 2025 Wed Oct 22 12:42:58 EDT 2025
+	DEPOSIT_TO_SAVINGS 20.01
+	DEPOSIT_TO_SAVINGS 40.91
+getTransferToCheckingWithDate Wed Oct 22 12:42:57 EDT 2025 Wed Oct 22 12:42:58 EDT 2025
+	TRANSFER_TO_CHECKING 23.42
+getTransferToSavingsWithDate Wed Oct 22 12:42:57 EDT 2025 Wed Oct 22 12:42:58 EDT 2025
+	TRANSFER_TO_SAVINGS 37.26
+getFailedWithdrawFromCheckingWithDate Wed Oct 22 12:42:56 EDT 2025 Wed Oct 22 12:42:58 EDT 2025
+	WITHDRAW_FROM_CHECKING 50.01
+getFailedWithdrawFromSavingsWithDate Wed Oct 22 12:42:56 EDT 2025 Wed Oct 22 12:42:58 EDT 2025
+	WITHDRAW_FROM_SAVINGS 50.01
+getFailedDepositToCheckingWithDate Wed Oct 22 12:42:56 EDT 2025 Wed Oct 22 12:42:58 EDT 2025
+getFailedDepositToSavingsWithDate Wed Oct 22 12:42:56 EDT 2025 Wed Oct 22 12:42:58 EDT 2025
+getFailedTransferToCheckingWithDate Wed Oct 22 12:42:56 EDT 2025 Wed Oct 22 12:42:58 EDT 2025
+	TRANSFER_TO_CHECKING 50.01
+getFailedTransferToSavingsWithDate Wed Oct 22 12:42:56 EDT 2025 Wed Oct 22 12:42:58 EDT 2025
+	TRANSFER_TO_SAVINGS 50.01
 end EnhancedBankAccount
 smith, bill, 000003
 0.9400000000000048

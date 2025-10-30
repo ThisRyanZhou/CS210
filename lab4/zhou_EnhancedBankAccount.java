@@ -78,55 +78,47 @@ class zhou_EnhancedBankAccount extends zhou_BankAccount
 			}
 		}
 		return results;
-	}
-	
+	}	
+
 	public java.util.ArrayList<Transaction> getTransactions(TransactionListType transactionListType, TransactionType transactionType, java.util.Date startDate, java.util.Date endDate)
 	{
 		java.util.ArrayList<Transaction> results = new java.util.ArrayList<>();
 				
 		if( transactionListType == TransactionListType.ALL_SUCCESSFULL )
 		{
-			for(Transaction a: successfulTransactions){
-				boolean during = (a.date().before(endDate) || a.date().equals(endDate)) && (a.date().after(startDate) && a.date().equals(startDate));
-				if (during){
-					results.add(a);
+			for ( Transaction t : successfulTransactions ) {
+				if ( (t.date().compareTo(startDate) >= 0) && (t.date().compareTo(endDate) <= 0) && (t.type() == transactionType) ) {
+					results.add(t);
 				}
 			}
 		}
 		
 		if( transactionListType == TransactionListType.SOME_SUCCESSFULL )
 		{
-			for(Transaction a: successfulTransactions){
-				if(a.type().equals(transactionType)){
-					boolean during = (a.date().before(endDate) || a.date().equals(endDate)) && (a.date().after(startDate) && a.date().equals(startDate));
-					if (during){
-						results.add(a);
-					}
+			for ( Transaction t : successfulTransactions ) {
+				if ( (t.date().compareTo(startDate) >= 0) && (t.date().compareTo(endDate) <= 0) && (t.type() == transactionType) ) {
+					results.add(t);
 				}
 			}
 		}
 		
 		if( transactionListType == TransactionListType.ALL_FAILED )
 		{
-			for(Transaction a: failedTransactions){
-				boolean during = (a.date().before(endDate) || a.date().equals(endDate)) && (a.date().after(startDate) && a.date().equals(startDate));
-				if (during){
-					results.add(a);
+			for ( Transaction t : failedTransactions ) {
+				if ( (t.date().compareTo(startDate) >= 0) && (t.date().compareTo(endDate) <= 0) && (t.type() == transactionType) ) {
+					results.add(t);
 				}
 			}
 		}
 		
 		if( transactionListType == TransactionListType.SOME_FAILED )
 		{
-			for(Transaction a: failedTransactions){
-				if(a.type().equals(transactionType)){
-					boolean during = (a.date().before(endDate) || a.date().equals(endDate)) && (a.date().after(startDate) && a.date().equals(startDate));
-					if (during){
-						results.add(a);
-					}
+			for ( Transaction t : failedTransactions ) {
+				if ( (t.date().compareTo(startDate) >= 0) && (t.date().compareTo(endDate) <= 0) && (t.type() == transactionType) ) {
+					results.add(t);
 				}
 			}
 		}
 		return results;
-	}	
+	}
 }
