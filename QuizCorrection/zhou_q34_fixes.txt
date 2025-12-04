@@ -1,0 +1,6 @@
+5) H would replace D which makes E's parent node D.
+6) The sucessor would be key D.
+7) The predecessor  of key 0 would be key M.
+8) J would replace A and J would be replaced by K/
+
+13)Infinity 12 10 7
