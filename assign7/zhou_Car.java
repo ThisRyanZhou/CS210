@@ -42,26 +42,18 @@ class zhou_Car implements CarFunctions
 		return (double)currentFuelInGallons * fuelEconomyInMilesPerGallon;
 	}
 	public boolean equals(Object o){
-		if(o == null){
-            return false;
-        }
+		if (o == this) return true;
+		if (o == null) return false;
+		if (getClass() != o.getClass()) return false;
 
-        if( this == o){
-            return true;
-        }
-        
-        if( getClass() == o.getClass()){
-            if(id == ((zhou_Car) o).getId()){
-                return true;
-            }
-        }
-
-        return false;
+		zhou_Car other = (zhou_Car) o;
+		if (this.id == null) return other.id == null;
+		return this.id.equals(other.id);
 	}
 	public void drive(int timeInMinutes, int speedInMilesPerHour) throws FuelException{
 		double distanceTraveled = ((double)speedInMilesPerHour) * (timeInMinutes / 60.0);
 		double gallonsUsed = ((double)distanceTraveled) / fuelEconomyInMilesPerGallon;
-		if (gallonsUsed > currentFuelInGallons){
+		if (gallonsUsed >= currentFuelInGallons){
 			currentFuelInGallons = 0.0;
 			throw new FuelException("no fuel remaining for id = " + this.id);
 		}
@@ -69,7 +61,7 @@ class zhou_Car implements CarFunctions
 	}
 	public void drive(double distanceInMiles) throws FuelException{	
 		double gallonsUsed = distanceInMiles / fuelEconomyInMilesPerGallon;
-		if (gallonsUsed > currentFuelInGallons){
+		if (gallonsUsed >= currentFuelInGallons){
 			currentFuelInGallons = 0.0;
 			throw new FuelException("no fuel remaining for id = " + this.id);
 		}
@@ -78,7 +70,7 @@ class zhou_Car implements CarFunctions
 	public void idle(int durationInMinutes) throws FuelException{
 		double durationInHours = durationInMinutes / 60.0;
 		double gallonsUsed = durationInHours * idleBurnRateInGallonsPerHour;
-		if (gallonsUsed > currentFuelInGallons){
+		if (gallonsUsed >= currentFuelInGallons){
 			currentFuelInGallons = 0.0;
 			throw new FuelException("no fuel remaining for id = " + this.id);
 		}

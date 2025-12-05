@@ -66,9 +66,9 @@ public class zhou_WeightedGraph implements WeightedGraphFunctions{
             }
 
             for(EdgeWithWeight e : edges){
-                if(e.fromVertex.equals(v)){
-                    int uldx = getIndex(e.toVertex);
-                    double newWeight = currentWeight.getWeight() + e.weight;
+                if(e.fromVertex().equals(v)){
+                    int uldx = getIndex(e.toVertex());
+                    double newWeight = currentWeight.getWeight() + e.weight();
                     if(newWeight < cost[uldx].getWeight()){
                         priQue.remove(cost[uldx]);
                         cost[uldx].setWeight(newWeight);
@@ -117,8 +117,8 @@ public class zhou_WeightedGraph implements WeightedGraphFunctions{
             int b = reversePath.get(i + 1);
             double w = 0;
             for (EdgeWithWeight e : edges) {
-                if (e.fromVertex.equals(a) && e.toVertex.equals(b)) {
-                    w = e.weight;
+                if (e.fromVertex().equals(a) && e.toVertex().equals(b)) {
+                    w = e.weight();
                     break;
                 }
             }
@@ -142,7 +142,7 @@ public class zhou_WeightedGraph implements WeightedGraphFunctions{
     }
 	public boolean addWeightedEdge(int from, int to, double weight){
         for(int i = 0; i < edges.size(); i++){
-            if((edges.get(i).fromVertex.equals(from)) && (edges.get(i).toVertex.equals(to))){
+            if((edges.get(i).fromVertex().equals(from)) && (edges.get(i).toVertex().equals(to))){
                 return false;
             }
         }

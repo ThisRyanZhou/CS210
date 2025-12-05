@@ -2,6 +2,9 @@ public class VertexWithWeight implements VertexWithWeightFunctions{
     private final int vertex;
     private double weight;
 
+    public VertexWithWeight(int v){
+        vertex = v;
+    }
     public VertexWithWeight(int v, double w){
         vertex = v;
         weight = w;

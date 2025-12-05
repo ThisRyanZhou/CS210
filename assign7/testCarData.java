@@ -13,11 +13,11 @@ class testCarData
 		}
 		
 		// update the below to get the command line arguments
-		String filename = args[0];
-		double minTotalRange = (double) Integer.valueOf(args[1]);
-		double maxTotalRange = (double) Integer.valueOf(args[2]);
-		double minRemainingRange = (double) Integer.valueOf(args[3]);
-		double maxRemainingRange = (double) Integer.valueOf(args[4]);
+		String filename = "";
+		double minTotalRange = 0.0;
+		double maxTotalRange = 0.0;
+		double minRemainingRange = 0.0;
+		double maxRemainingRange = 0.0;
 		
 		// create a ManageCarData object
 		ManageCarDataFunctions manageCarData = new zhou_ManageCarData();

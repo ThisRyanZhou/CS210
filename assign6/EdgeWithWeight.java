@@ -1,13 +1,18 @@
-public class EdgeWithWeight implements EdgeWithWeightFunctions{
-    Integer fromVertex;
-    Integer toVertex;
-    Double weight;
+// public class EdgeWithWeight implements EdgeWithWeightFunctions{
+//     Integer fromVertex;
+//     Integer toVertex;
+//     Double weight;
         
-    public EdgeWithWeight(Integer fromVertex, Integer toVertex, Double weight){
-        this.fromVertex = fromVertex;
-        this.toVertex = toVertex;
-        this.weight = weight;
-    }
+//     public EdgeWithWeight(Integer fromVertex, Integer toVertex, Double weight){
+//         this.fromVertex = fromVertex;
+//         this.toVertex = toVertex;
+//         this.weight = weight;
+//     }
+//     public String toString(){
+//         return "(" + fromVertex + "," + toVertex + "," + weight + ")";
+//     }
+// }
+public record EdgeWithWeight(Integer fromVertex, Integer toVertex, Double weight) implements EdgeWithWeightFunctions {
     public String toString(){
         return "(" + fromVertex + "," + toVertex + "," + weight + ")";
     }

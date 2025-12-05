@@ -48,7 +48,8 @@ public class zhou_ManageCarData implements ManageCarDataFunctions
             }
             selectionSort(carIdListSorted);
         } catch (Exception e){
-            
+            System.err.println("Exception reading data file '" + filename + "': " + e.toString());
+            e.printStackTrace(System.err);
         }
     }
 
@@ -132,7 +133,7 @@ public class zhou_ManageCarData implements ManageCarDataFunctions
                 returnable.add(addAble);
             }
         }
-        for(CarFunctions a: carList.values()){
+        for(CarFunctions a: addBack){
             carListByTotalRange.add(a);
         }
         return returnable;
@@ -150,7 +151,7 @@ public class zhou_ManageCarData implements ManageCarDataFunctions
                 returnable.add(addAble);
             }
         }
-        for(CarFunctions a: carList.values()){
+        for(CarFunctions a: addBack){
             carListByRemainingRange.add(a);
         }
         return returnable;
@@ -172,56 +173,15 @@ public class zhou_ManageCarData implements ManageCarDataFunctions
 
         return s + "\t" + equalIndex + "\t" + fuelMatches.toString().trim();
     }
-
-    // public String drive(Integer id, int time, int speed)
-    // {
-    //     try
-    //     {
-    //         carList.get(id).drive(time, speed);
-    //         return "";
-    //     }
-    //     catch (Exception e)
-    //     {
-    //         return e.toString();
-    //     }
-    // }
-
-    // public String drive(Integer id, double dist)
-    // {
-    //     try
-    //     {
-    //         carList.get(id).drive(dist);
-    //         return "";
-    //     }
-    //     catch (Exception e)
-    //     {
-    //         return e.toString();
-    //     }
-    // }
-
-    // public String idle(Integer id, int minutes)
-    // {
-    //     try
-    //     {
-    //         carList.get(id).idle(minutes);
-    //         return "";
-    //     }
-    //     catch (Exception e)
-    //     {
-    //         return e.toString();
-    //     }
-    // }
     public String drive(Integer id, int time, int speed)
     {
         try
         {
             CarFunctions car = carList.get(id);
             if (car == null)
-                return "java.lang.Exception: Car ID does not exist.";
+                return "";
 
             car.drive(time, speed);
-
-            // update priority queues
             carListByTotalRange.remove(car);
             carListByRemainingRange.remove(car);
             carListByTotalRange.add(car);
@@ -240,11 +200,9 @@ public class zhou_ManageCarData implements ManageCarDataFunctions
         {
             CarFunctions car = carList.get(id);
             if (car == null)
-                return "java.lang.Exception: Car ID does not exist.";
+                return "";
 
             car.drive(dist);
-
-            // update priority queues
             carListByTotalRange.remove(car);
             carListByRemainingRange.remove(car);
             carListByTotalRange.add(car);
@@ -264,11 +222,9 @@ public class zhou_ManageCarData implements ManageCarDataFunctions
         {
             CarFunctions car = carList.get(id);
             if (car == null)
-                return "java.lang.Exception: Car ID does not exist.";
+                return "";
 
             car.idle(minutes);
-
-            // update priority queues
             carListByTotalRange.remove(car);
             carListByRemainingRange.remove(car);
             carListByTotalRange.add(car);
