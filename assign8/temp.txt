@@ -1,0 +1,128 @@
+
+● Programming assignment 8
+● Everything is covered in “program 8 & lab12.pdf”
+● The program is due at 11:59pm, on the last day of
+classes, 12/5/2025
+– But I will accept submissions, for full credit, until 11:59pm, on 12/11/2025
+● You don't have to replicate my hideous
+black/red/yellow/turquoise border for the JPanels if
+you don't want to, the borders from the lab are fine
+– But if you've already replicated my colors, that's fine also
+● You are to get the filenames, the sort file and the
+search file as commandline parameters
+– The sort file is the first commandline parameter
+– The search file is the second commandline parameter
+– Do not implement a file choser to have me select the input files from the
+file system, I will not grade these
+2
+● Your program will do the following
+– Based on a menu item selection, read the sort file, and
+populate an int[] with the values read
+– Based on a menu item selection, read the search file, and
+populate an int[] with the values read
+– Based on a menu item selection, exit the program
+● For programming assignment 7 we implemented selection sort to
+sort a ArrayList of type Integer
+– You can make some minor changes to this to sort an int[]
+3
+● Your program will do the following (cont)
+● Based on button clicks
+– Sort a copy of the sort int[] using your implementation of selection sort
+– Add key values to an initially empy binary search tree for the values in the
+sort int[]
+● Use a TreeSet<Integer> if your insertNode() and getNode() methods
+of your binary search tree are not working
+– Add the values in the sort int[] to an initially empty TreeSet<Integer>
+– Add the values in the sort int[] to an initially empty PriorityQueue<Integer>
+– Add the values in the sort int[] to an initially empty HashSet<Integer>
+– Add the values in the sort int[] to an initially empty ArrayList<Integer>
+– Add the values in the sort int[] to an initially empty ArrayList<Integer> and
+sort it using java.util.Collections.sort
+– Add the values in the sort int[] to an int[]
+– Sort a copy of the sort int[] using merge sort (optional for extra credit)
+● We will be discussing merge sort in the near future
+4
+● If the sort ints/add to buttons are clicked multiple times, you should
+either instantiate a new BinarySearchTree or clear out the
+TreeSet/ProrityQueue/HashSet/ArrayList/int[]
+● Based on button clicks
+– Seach for each of the search int[] values in the sorted int[] using your
+implementation of a binary search
+– Search the binary search tree for each of the key values in the search
+int[]
+– Search the TreeSet for each of the key values in the search int[]
+– Search the PriorityQueue for each of the key values in the search int[]
+– Search the HashSet for each of the key values in the search int[]
+– Search the ArrayList for each of the key values in the search int[]
+– Search the ArrayList for each of the key values in the search int[] using
+java.util.Collection.binarySearch
+– Search the int[] for each of the key values in the search int[]
+– Search the merge sorted int[] for each of the key values in the search int[]
+using your implementation of a binary search (optional for extra credit)
+5
+● The buttons should initially all be disabled
+● When the read sort file menu item is selected, and
+the sort file is read, the buttons associated with
+sorting and adding should be enabled
+● Each of the search buttons should be disabled until
+the search file is read and the associated sort/add
+button is selected
+– If the search file is read prior to a sort/add button being
+selected, then the corresponding search button is
+enabled when the sort/add button is selected
+– If the sort/add button is selected prior to the search file
+being read, then the coprresponding search button should
+be enabled when the search file is read
+6
+● Upload all of the source files that are required to
+execute your program to the program assignment by
+11:59pm on the due date
+● When I grade your program
+– I will be copying your files into a folder
+– Execute “javac
+your_last_name_in_lower_case_program8.java” or “javac
+your_last_name_in_lower_case_p8.java”
+– Execute “java your_last_name_in_lower_case_program8
+sort_data_100000.txt search_data_100000.txt” or “java
+your_last_name_in_lower_case_p8 sort_data_100000.txt
+search_data_100000.txt”
+– Click buttons and menu items
+7
+● When I grade your program (cont)
+– If your program doesn't compile?
+– Make sure that you don't use a package
+● That will cause it to not compile (or actually change the command to run it)
+– Make sure all of your filenames and class names are
+correct
+● So that your program compiles
+– Here are the files in my submission
+● garrison_p8.java
+● BinarySearchTree.java
+● BinarySearchTreeFunctions.java
+● Node.java
+● NodeFunctions.java
+– Before you submit, try compiling and executing from the
+commandline with the files that you are submitting
+8
+● When I grade your program (cont)
+– When I test your program, I'm going to be looking for
+● Are your times similar to mine for the sorting and adding buttons
+● Are your times similar to mine for the searching buttons
+● Are the number of found search values the same as mine
+● Are your buttons enabled/disabled appropriately
+● Do you have the correct menu items and are they in the correct
+order
+● Do you have one menu and is it “File”
+● Do you have the correct buttons/labels and alignment
+– Your GUI should look very similar to mine
+– There shouldn't be any major shocks about what your
+grade for the program is
+– Get the program name correct
+● Either “your_last_name_in_lower_case”_program8.java or
+“your_last_name_in_lower_case”_p8.java
+9
+● If you look at the class files that are created when we
+compile the program, there are two class files related
+to our inner classes
+– garrison_p8$ButtonActionListener.class
+– garrison_p8$MenuItemActionListener.class
