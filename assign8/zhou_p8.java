@@ -13,58 +13,58 @@ public class zhou_p8 {
     // we have 10 labels on each side
     //sort int
     private static boolean selectionSortDone = false;
-    private static JButton selectionSortBtn;
-    private static JButton binarySearchSortedBtn;
+    private static JButton selectionSortButton;
+    private static JButton binarySearchSortedButton;
     //add to binarySearchTree
     private static BinarySearchTree binarySearchTree = null;
     private static boolean binarySearchTreeDone = false;
-    private static JButton binarySearchTreeBtn;
-    private static JButton binarySearchTreeSearchBtn;
+    private static JButton binarySearchTreeButton;
+    private static JButton binarySearchTreeSearchButton;
     //add to treeset
     private static TreeSet<Integer> treeSet = null;
     private static boolean treeSetDone = false;
-    private static JButton treeSetBtn;
-    private static JButton treeSetSearchBtn;
+    private static JButton treeSetButton;
+    private static JButton treeSetSearchButton;
     //add to priority queue
     private static PriorityQueue<Integer> priorityQueue = null;
     private static boolean priorityQueueDone = false;
-    private static JButton priorityQueueBtn;
-    private static JButton priorityQueueSearchBtn;
+    private static JButton priorityQueueButton;
+    private static JButton priorityQueueSearchButton;
     //add to hashset
     private static HashSet<Integer> hashSet = null;
     private static boolean hashSetDone = false;
-    private static JButton hashSetBtn;
-    private static JButton hashSetSearchBtn;
+    private static JButton hashSetButton;
+    private static JButton hashSetSearchButton;
     //add to arraylist
     private static ArrayList<Integer> arrayList = null;
     private static boolean arrayListDone = false;
-    private static JButton arrayListBtn;
-    private static JButton arrayListSearchBtn;
+    private static JButton arrayListButton;
+    private static JButton arrayListSearchButton;
     //add to sorted arraylist
     private static ArrayList<Integer> arrayListSorted = null;
     private static boolean arrayListSortedDone = false;
-    private static JButton arrayListSortedBtn;
-    private static JButton arrayListBinarySearchBtn;
+    private static JButton arrayListSortedButton;
+    private static JButton arrayListBinarySearchButton;
     //add to array
     private static int[] sortedIntArray = null;
     private static boolean intArrayDone = false;
-    private static JButton intArrayBtn;
-    private static JButton intArraySearchBtn;
+    private static JButton intArrayButton;
+    private static JButton intArraySearchButton;
     //merge sort ints
     private static int[] mergeSortedArray = null;
     private static boolean mergeSortDone = false;
-    private static JButton mergeSortBtn;
-    private static JButton mergeSortedBinarySearchBtn;
+    private static JButton mergeSortButton;
+    private static JButton mergeSortedBinarySearchButton;
     //merge2 sort ints
     private static int[] merge2SortedArray = null;
     private static boolean merge2SortDone = false;
-    private static JButton merge2SortBtn;
-    private static JButton merge2SortedBinarySearchBtn;
+    private static JButton merge2SortButton;
+    private static JButton merge2SortedBinarySearchButton;
     //quick sort ints
     private static int[] quickSortedArray = null;
     private static boolean quickSortDone = false;
-    private static JButton quickSortBtn;
-    private static JButton quickSortedBinarySearchBtn;
+    private static JButton quickSortButton;
+    private static JButton quickSortedBinarySearchButton;
 
     public static void main(String[] args) {
         if (args.length < 2){
@@ -99,33 +99,33 @@ public class zhou_p8 {
         GridBagConstraints gbcLeft = new GridBagConstraints();
         gbcLeft.fill = GridBagConstraints.NONE;
         gbcLeft.anchor = GridBagConstraints.LINE_START;
-        selectionSortBtn = new JButton("sort int");
-        binarySearchTreeBtn = new JButton("add to bst");
-        treeSetBtn = new JButton("add to treeset");
-        priorityQueueBtn = new JButton("add to priority queue");
-        hashSetBtn = new JButton("add to hashset");
-        arrayListBtn = new JButton("add to arraylist");
-        arrayListSortedBtn = new JButton("add to sorted arraylist");
-        intArrayBtn = new JButton("add to array");
-        mergeSortBtn = new JButton("merge sort ints");
-        merge2SortBtn = new JButton("merge2 sort ints");
-        quickSortBtn = new JButton("quick sort ints");
-        JButton[] leftButtons = {selectionSortBtn, binarySearchTreeBtn, treeSetBtn, priorityQueueBtn, hashSetBtn, arrayListBtn, arrayListSortedBtn, intArrayBtn, mergeSortBtn, merge2SortBtn, quickSortBtn};
+        selectionSortButton = new JButton("sort int");
+        binarySearchTreeButton = new JButton("add to bst");
+        treeSetButton = new JButton("add to treeset");
+        priorityQueueButton = new JButton("add to priority queue");
+        hashSetButton = new JButton("add to hashset");
+        arrayListButton = new JButton("add to arraylist");
+        arrayListSortedButton = new JButton("add to sorted arraylist");
+        intArrayButton = new JButton("add to array");
+        mergeSortButton = new JButton("merge sort ints");
+        merge2SortButton = new JButton("merge2 sort ints");
+        quickSortButton = new JButton("quick sort ints");
+        JButton[] leftButtons = {selectionSortButton, binarySearchTreeButton, treeSetButton, priorityQueueButton, hashSetButton, arrayListButton, arrayListSortedButton, intArrayButton, mergeSortButton, merge2SortButton, quickSortButton};
         leftLabels = new JLabel[12];
-        for (JButton btn : leftButtons) {
-            btn.setEnabled(false);
+        for (JButton Button : leftButtons) {
+            Button.setEnabled(false);
         }
-        selectionSortBtn.addActionListener(new ButtonActionListener("Selection Sort"));
-        binarySearchTreeBtn.addActionListener(new ButtonActionListener("BST"));
-        treeSetBtn.addActionListener(new ButtonActionListener("TreeSet"));
-        priorityQueueBtn.addActionListener(new ButtonActionListener("PriorityQueue"));
-        hashSetBtn.addActionListener(new ButtonActionListener("HashSet"));
-        arrayListBtn.addActionListener(new ButtonActionListener("ArrayList"));
-        arrayListSortedBtn.addActionListener(new ButtonActionListener("ArrayListSorted"));
-        intArrayBtn.addActionListener(new ButtonActionListener("int[]"));
-        mergeSortBtn.addActionListener(new ButtonActionListener("MergeSort"));
-        merge2SortBtn.addActionListener(new ButtonActionListener("Merge2Sort"));
-        quickSortBtn.addActionListener(new ButtonActionListener("QuickSort"));
+        selectionSortButton.addActionListener(new ButtonActionListener("Selection Sort"));
+        binarySearchTreeButton.addActionListener(new ButtonActionListener("BST"));
+        treeSetButton.addActionListener(new ButtonActionListener("TreeSet"));
+        priorityQueueButton.addActionListener(new ButtonActionListener("PriorityQueue"));
+        hashSetButton.addActionListener(new ButtonActionListener("HashSet"));
+        arrayListButton.addActionListener(new ButtonActionListener("ArrayList"));
+        arrayListSortedButton.addActionListener(new ButtonActionListener("ArrayListSorted"));
+        intArrayButton.addActionListener(new ButtonActionListener("int[]"));
+        mergeSortButton.addActionListener(new ButtonActionListener("MergeSort"));
+        merge2SortButton.addActionListener(new ButtonActionListener("Merge2Sort"));
+        quickSortButton.addActionListener(new ButtonActionListener("QuickSort"));
         for (int i = 0; i < leftButtons.length; i++) {
             leftLabels[i] = new JLabel("no result");
             leftLabels[i].setHorizontalAlignment(SwingConstants.CENTER);
@@ -150,33 +150,33 @@ public class zhou_p8 {
         GridBagConstraints gbcRight = new GridBagConstraints();
         gbcRight.fill = GridBagConstraints.NONE;
         gbcRight.anchor = GridBagConstraints.LINE_START;
-        binarySearchSortedBtn = new JButton("search sorted ints");
-        binarySearchTreeSearchBtn = new JButton("search bst");
-        treeSetSearchBtn = new JButton("search treeset");
-        priorityQueueSearchBtn = new JButton("search priority queue");
-        hashSetSearchBtn = new JButton("search hashset");
-        arrayListSearchBtn = new JButton("search arraylist");
-        arrayListBinarySearchBtn = new JButton("search sorted arraylist");
-        intArraySearchBtn = new JButton("search array");
-        mergeSortedBinarySearchBtn = new JButton("search merge sorted ints");
-        merge2SortedBinarySearchBtn = new JButton("search merge2 sorted ints");
-        quickSortedBinarySearchBtn = new JButton("search quick sorted ints");
-        JButton[] rightButtons = {binarySearchSortedBtn, binarySearchTreeSearchBtn, treeSetSearchBtn, priorityQueueSearchBtn, hashSetSearchBtn, arrayListSearchBtn, arrayListBinarySearchBtn, intArraySearchBtn, mergeSortedBinarySearchBtn, merge2SortedBinarySearchBtn, quickSortedBinarySearchBtn};
+        binarySearchSortedButton = new JButton("search sorted ints");
+        binarySearchTreeSearchButton = new JButton("search bst");
+        treeSetSearchButton = new JButton("search treeset");
+        priorityQueueSearchButton = new JButton("search priority queue");
+        hashSetSearchButton = new JButton("search hashset");
+        arrayListSearchButton = new JButton("search arraylist");
+        arrayListBinarySearchButton = new JButton("search sorted arraylist");
+        intArraySearchButton = new JButton("search array");
+        mergeSortedBinarySearchButton = new JButton("search merge sorted ints");
+        merge2SortedBinarySearchButton = new JButton("search merge2 sorted ints");
+        quickSortedBinarySearchButton = new JButton("search quick sorted ints");
+        JButton[] rightButtons = {binarySearchSortedButton, binarySearchTreeSearchButton, treeSetSearchButton, priorityQueueSearchButton, hashSetSearchButton, arrayListSearchButton, arrayListBinarySearchButton, intArraySearchButton, mergeSortedBinarySearchButton, merge2SortedBinarySearchButton, quickSortedBinarySearchButton};
         rightLabels = new JLabel[12];
-        for (JButton btn : rightButtons) {
-            btn.setEnabled(false);
+        for (JButton Button : rightButtons) {
+            Button.setEnabled(false);
         }
-        binarySearchSortedBtn.addActionListener(new ButtonActionListener("BinarySearchSorted"));
-        binarySearchTreeSearchBtn.addActionListener(new ButtonActionListener("BSTSearch"));
-        treeSetSearchBtn.addActionListener(new ButtonActionListener("TreeSetSearch"));
-        priorityQueueSearchBtn.addActionListener(new ButtonActionListener("PriorityQueueSearch"));
-        hashSetSearchBtn.addActionListener(new ButtonActionListener("HashSetSearch"));
-        arrayListSearchBtn.addActionListener(new ButtonActionListener("ArrayListSearch"));
-        arrayListBinarySearchBtn.addActionListener(new ButtonActionListener("ArrayListBinarySearch"));
-        intArraySearchBtn.addActionListener(new ButtonActionListener("int[]Search"));
-        mergeSortedBinarySearchBtn.addActionListener(new ButtonActionListener("MergeSortedBinarySearch"));
-        merge2SortedBinarySearchBtn.addActionListener(new ButtonActionListener("Merge2SortedBinarySearch"));
-        quickSortedBinarySearchBtn.addActionListener(new ButtonActionListener("QuickSortedBinarySearch"));
+        binarySearchSortedButton.addActionListener(new ButtonActionListener("BinarySearchSorted"));
+        binarySearchTreeSearchButton.addActionListener(new ButtonActionListener("BSTSearch"));
+        treeSetSearchButton.addActionListener(new ButtonActionListener("TreeSetSearch"));
+        priorityQueueSearchButton.addActionListener(new ButtonActionListener("PriorityQueueSearch"));
+        hashSetSearchButton.addActionListener(new ButtonActionListener("HashSetSearch"));
+        arrayListSearchButton.addActionListener(new ButtonActionListener("ArrayListSearch"));
+        arrayListBinarySearchButton.addActionListener(new ButtonActionListener("ArrayListBinarySearch"));
+        intArraySearchButton.addActionListener(new ButtonActionListener("int[]Search"));
+        mergeSortedBinarySearchButton.addActionListener(new ButtonActionListener("MergeSortedBinarySearch"));
+        merge2SortedBinarySearchButton.addActionListener(new ButtonActionListener("Merge2SortedBinarySearch"));
+        quickSortedBinarySearchButton.addActionListener(new ButtonActionListener("QuickSortedBinarySearch"));
         for (int i = 0; i < rightButtons.length; i++) {
             rightLabels[i] = new JLabel("no result");
             rightLabels[i].setHorizontalAlignment(SwingConstants.CENTER);
@@ -299,17 +299,17 @@ public class zhou_p8 {
             for (int i = 0; i < list.size(); i++) {
                 sortData[i] = list.get(i);
             }
-            selectionSortBtn.setEnabled(true);
-            binarySearchTreeBtn.setEnabled(true);
-            treeSetBtn.setEnabled(true);
-            priorityQueueBtn.setEnabled(true);
-            hashSetBtn.setEnabled(true);
-            arrayListBtn.setEnabled(true);
-            arrayListSortedBtn.setEnabled(true);
-            intArrayBtn.setEnabled(true);
-            mergeSortBtn.setEnabled(true);
-            merge2SortBtn.setEnabled(true);
-            quickSortBtn.setEnabled(true);
+            selectionSortButton.setEnabled(true);
+            binarySearchTreeButton.setEnabled(true);
+            treeSetButton.setEnabled(true);
+            priorityQueueButton.setEnabled(true);
+            hashSetButton.setEnabled(true);
+            arrayListButton.setEnabled(true);
+            arrayListSortedButton.setEnabled(true);
+            intArrayButton.setEnabled(true);
+            mergeSortButton.setEnabled(true);
+            merge2SortButton.setEnabled(true);
+            quickSortButton.setEnabled(true);
             enableSearchButtonsIfReady();
         } catch (FileNotFoundException ex) {
             System.out.println("File not found: " + fileName);
@@ -338,37 +338,37 @@ public class zhou_p8 {
     private static void enableSearchButtonsIfReady() {
         if (searchData == null) return;
         if (selectionSortDone) {
-            binarySearchSortedBtn.setEnabled(true);
+            binarySearchSortedButton.setEnabled(true);
         }
         if (binarySearchTreeDone) {
-            binarySearchTreeSearchBtn.setEnabled(true);
+            binarySearchTreeSearchButton.setEnabled(true);
         }
         if (treeSetDone) {
-            treeSetSearchBtn.setEnabled(true);
+            treeSetSearchButton.setEnabled(true);
         }
         if (priorityQueueDone) {
-            priorityQueueSearchBtn.setEnabled(true);
+            priorityQueueSearchButton.setEnabled(true);
         }
         if (hashSetDone) {
-            hashSetSearchBtn.setEnabled(true);
+            hashSetSearchButton.setEnabled(true);
         }
         if (arrayListDone) {
-            arrayListSearchBtn.setEnabled(true);
+            arrayListSearchButton.setEnabled(true);
         }
         if (arrayListSortedDone) {
-            arrayListBinarySearchBtn.setEnabled(true);
+            arrayListBinarySearchButton.setEnabled(true);
         }
         if (intArrayDone) {
-            intArraySearchBtn.setEnabled(true);
+            intArraySearchButton.setEnabled(true);
         }
         if (mergeSortDone) {
-            mergeSortedBinarySearchBtn.setEnabled(true);
+            mergeSortedBinarySearchButton.setEnabled(true);
         }
         if (merge2SortDone) {
-            merge2SortedBinarySearchBtn.setEnabled(true);
+            merge2SortedBinarySearchButton.setEnabled(true);
         }
         if (quickSortDone) {
-            quickSortedBinarySearchBtn.setEnabled(true);
+            quickSortedBinarySearchButton.setEnabled(true);
         }
     }
 
@@ -387,7 +387,7 @@ public class zhou_p8 {
         selectionSortDone = true;
         sortedIntArray = dataCopy;
         if (searchData != null) {
-            binarySearchSortedBtn.setEnabled(true);
+            binarySearchSortedButton.setEnabled(true);
         }
     }
     
@@ -405,7 +405,7 @@ public class zhou_p8 {
         leftLabels[1].setText((int)timeMs + " ms");
         binarySearchTreeDone = true;
         if (searchData != null) {
-            binarySearchTreeSearchBtn.setEnabled(true);
+            binarySearchTreeSearchButton.setEnabled(true);
         }
     }
     
@@ -423,7 +423,7 @@ public class zhou_p8 {
         leftLabels[2].setText((int)timeMs + " ms");
         treeSetDone = true;
         if (searchData != null) {
-            treeSetSearchBtn.setEnabled(true);
+            treeSetSearchButton.setEnabled(true);
         }
     }
     
@@ -441,7 +441,7 @@ public class zhou_p8 {
         leftLabels[3].setText((int)timeMs + " ms");
         priorityQueueDone = true;
         if (searchData != null) {
-            priorityQueueSearchBtn.setEnabled(true);
+            priorityQueueSearchButton.setEnabled(true);
         }
     }
     
@@ -459,7 +459,7 @@ public class zhou_p8 {
         leftLabels[4].setText((int)timeMs + " ms");
         hashSetDone = true;
         if (searchData != null) {
-            hashSetSearchBtn.setEnabled(true);
+            hashSetSearchButton.setEnabled(true);
         }
     }
     
@@ -477,7 +477,7 @@ public class zhou_p8 {
         leftLabels[5].setText((int)timeMs + " ms");
         arrayListDone = true;
         if (searchData != null) {
-            arrayListSearchBtn.setEnabled(true);
+            arrayListSearchButton.setEnabled(true);
         }
     }
     
@@ -496,7 +496,7 @@ public class zhou_p8 {
         leftLabels[6].setText((int)timeMs + " ms");
         arrayListSortedDone = true;
         if (searchData != null) {
-            arrayListBinarySearchBtn.setEnabled(true);
+            arrayListBinarySearchButton.setEnabled(true);
         }
     }
     
@@ -512,7 +512,7 @@ public class zhou_p8 {
         leftLabels[7].setText((int)timeMs + " ms");
         intArrayDone = true;
         if (searchData != null) {
-            intArraySearchBtn.setEnabled(true);
+            intArraySearchButton.setEnabled(true);
         }
     }
     
@@ -528,7 +528,7 @@ public class zhou_p8 {
         leftLabels[8].setText((int)timeMs + " ms");
         mergeSortDone = true;
         if (searchData != null) {
-            mergeSortedBinarySearchBtn.setEnabled(true);
+            mergeSortedBinarySearchButton.setEnabled(true);
         }
     }
     
@@ -544,7 +544,7 @@ public class zhou_p8 {
         leftLabels[9].setText((int)timeMs + " ms");
         merge2SortDone = true;
         if (searchData != null) {
-            merge2SortedBinarySearchBtn.setEnabled(true);
+            merge2SortedBinarySearchButton.setEnabled(true);
         }
     }
     
@@ -560,7 +560,7 @@ public class zhou_p8 {
         leftLabels[10].setText((int)timeMs + " ms");
         quickSortDone = true;
         if (searchData != null) {
-            quickSortedBinarySearchBtn.setEnabled(true);
+            quickSortedBinarySearchButton.setEnabled(true);
         }
     }
     
@@ -745,14 +745,14 @@ public class zhou_p8 {
     private static void selectionSort(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
-            int minIdx = i;
+            int minIndex = i;
             for (int j = i + 1; j < n; j++) {
-                if (arr[j] < arr[minIdx]) {
-                    minIdx = j;
+                if (arr[j] < arr[minIndex]) {
+                    minIndex = j;
                 }
             }
-            int temp = arr[minIdx];
-            arr[minIdx] = arr[i];
+            int temp = arr[minIndex];
+            arr[minIndex] = arr[i];
             arr[i] = temp;
         }
     }
@@ -776,21 +776,21 @@ public class zhou_p8 {
     }
     
     private static void merge(int[] arr, int left, int mid, int right) {
-        int n1 = mid - left + 1;
-        int n2 = right - mid;
+        int firstPointer = mid - left + 1;
+        int secondPointer = right - mid;
         
-        int[] leftArr = new int[n1];
-        int[] rightArr = new int[n2];
+        int[] leftArr = new int[firstPointer];
+        int[] rightArr = new int[secondPointer];
         
-        for (int i = 0; i < n1; i++) {
+        for (int i = 0; i < firstPointer; i++) {
             leftArr[i] = arr[left + i];
         }
-        for (int j = 0; j < n2; j++) {
+        for (int j = 0; j < secondPointer; j++) {
             rightArr[j] = arr[mid + 1 + j];
         }
         
         int i = 0, j = 0, k = left;
-        while (i < n1 && j < n2) {
+        while (i < firstPointer && j < secondPointer) {
             if (leftArr[i] <= rightArr[j]) {
                 arr[k] = leftArr[i];
                 i++;
@@ -801,13 +801,13 @@ public class zhou_p8 {
             k++;
         }
         
-        while (i < n1) {
+        while (i < firstPointer) {
             arr[k] = leftArr[i];
             i++;
             k++;
         }
         
-        while (j < n2) {
+        while (j < secondPointer) {
             arr[k] = rightArr[j];
             j++;
             k++;
@@ -815,21 +815,21 @@ public class zhou_p8 {
     }
     
     private static void merge2(int[] arr, int left, int mid, int right) {
-        int n1 = mid - left + 1;
-        int n2 = right - mid;
+        int firstPointer = mid - left + 1;
+        int secondPointer = right - mid;
         
-        int[] leftArr = new int[n1];
-        int[] rightArr = new int[n2];
+        int[] leftArr = new int[firstPointer];
+        int[] rightArr = new int[secondPointer];
         
-        for (int i = 0; i < n1; i++) {
+        for (int i = 0; i < firstPointer; i++) {
             leftArr[i] = arr[left + i];
         }
-        for (int j = 0; j < n2; j++) {
+        for (int j = 0; j < secondPointer; j++) {
             rightArr[j] = arr[mid + 1 + j];
         }
         
         int i = 0, j = 0, k = left;
-        while (i < n1 && j < n2) {
+        while (i < firstPointer && j < secondPointer) {
             if (leftArr[i] <= rightArr[j]) {
                 arr[k] = leftArr[i];
                 i++;
@@ -840,13 +840,13 @@ public class zhou_p8 {
             k++;
         }
         
-        while (i < n1) {
+        while (i < firstPointer) {
             arr[k] = leftArr[i];
             i++;
             k++;
         }
         
-        while (j < n2) {
+        while (j < secondPointer) {
             arr[k] = rightArr[j];
             j++;
             k++;
